@@ -23,11 +23,12 @@ class Email {
         $mail->SMTPAuth   = true;                                    // Habilitar autenticación SMTP
         $mail->Username   = $_ENV["EMAIL_USER"];                        // Usuario SMTP
         $mail->Password   = $_ENV["EMAIL_PASS"];                        // Contraseña SMTP
-        $mail->SMTPSecure = 'tls';                                   // Habilitar encriptación TLS
+        // $mail->SMTPSecure = 'tls';                                   // Habilitar encriptación TLS
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = $_ENV["EMAIL_PORT"];                                    // Puerto TCP para conectar
 
-        $mail->setFrom('appsalon@appsalon.com', 'AppSalon Barberia y Peluqueria');
-        $mail->addAddress($this->email, 'Para: ');
+        $mail->setFrom($_ENV["EMAIL_FROM"], 'AppSalon Barberia y Peluqueria');
+        $mail->addAddress($this->email);
     
         $mail->isHTML(true);
         $mail->CharSet = "UTF-8";
@@ -51,7 +52,7 @@ class Email {
         $mail->SMTPSecure = 'tls';                                   // Habilitar encriptación TLS
         $mail->Port       = $_ENV["EMAIL_PORT"];                                    // Puerto TCP para conectar
 
-        $mail->setFrom('appsalon@appsalon.com', 'AppSalon Barberia y Peluqueria');
+        $mail->setFrom($_ENV["EMAIL_FROM"], 'AppSalon Barberia y Peluqueria');
         $mail->addAddress($this->email, 'Para: ');
 
         $mail->isHTML(true);
@@ -76,7 +77,7 @@ class Email {
         $mail->SMTPSecure = 'tls';                                   // Habilitar encriptación TLS
         $mail->Port       = $_ENV["EMAIL_PORT"];                                    // Puerto TCP para conectar
 
-        $mail->setFrom('appsalon@appsalon.com', 'AppSalon Barberia y Peluqueria');
+        $mail->setFrom($_ENV["EMAIL_FROM"], 'AppSalon Barberia y Peluqueria');
         $mail->addAddress($this->email, 'Para: ');
 
         $mail->isHTML(true);

@@ -79,6 +79,7 @@ class  LoginController {
 
                     $email = new Email($usuario->nombre, $usuario->email, $usuario->token);
                     $email->enviarEmail();
+                    debuguear($usuario);
                     $resultado = $usuario->guardar();
                     if($resultado) {
                         Header("Location: /mensaje");

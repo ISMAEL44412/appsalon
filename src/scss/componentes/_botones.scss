@@ -1,0 +1,13 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.submit {
+  @include m.boton(v.$azul, v.$blanco);
+}
+.boton {
+  @include m.boton(v.$azul, v.$blanco);
+}
+
+.boton-eliminar {
+  @include m.boton(v.$rojo, v.$blanco);
+}

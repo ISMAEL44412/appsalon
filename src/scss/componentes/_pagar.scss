@@ -1,0 +1,12 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.pago {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  .pago-total {
+    color: v.$azul;
+    font-weight: v.$bold;
+  }
+}

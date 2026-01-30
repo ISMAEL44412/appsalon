@@ -1,0 +1,16 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+.contenido-resumen {
+  span {
+    color: v.$azul;
+    font-weight: bold;
+  }
+}
+.contenedor-horario {
+  display: flex;
+  justify-content: space-between;
+  span {
+    color: v.$azul;
+    font-weight: bold;
+  }
+}

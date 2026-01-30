@@ -1,0 +1,23 @@
+{
+  "name": "ismig/app-salon_php_mvc_js_sass",
+  "description": "Proyecto PHP8, SASS, GULP, JS",
+  "autoload": {
+    "psr-4": {
+      "MVC\\": "./",
+      "Controllers\\": "./controllers",
+      "Model\\": "./models",
+      "Classes\\": "./classes"
+
+    }
+  },
+  "authors": [
+    {
+      "name": "ISMAEL44412",
+      "email": "rig8528@gmail.com"
+    }
+  ],
+  "require": {
+    "phpmailer/phpmailer": "^7.0",
+    "vlucas/phpdotenv": "^5.6"
+  }
+}
